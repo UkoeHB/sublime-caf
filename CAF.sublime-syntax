@@ -9,7 +9,7 @@ variables:
   non_raw_ident: '[[:alpha:]][_[:alnum:]]*|_[_[:alnum:]]+'
   # include a word boundary at the end to ensure all possible characters are consumed, to prevent catastrophic backtracking
   identifier: '(?:(?:{{non_raw_ident}})\b)'
-  type_identifier: '\b(?:[[:upper:]]|_*[[:upper:]][[:alnum:]_]*[[:lower:]][[:alnum:]_]*)\b'
+  type_identifier: '\b(?:_*[[:upper:]][[:alnum:]_]*)\b'
   macro_identifier: '{{identifier}}\!'
   macro_instruction_identifier: '{{type_identifier}}\!'
   constant: '\$(?:{{identifier}}::)*{{identifier}}'
